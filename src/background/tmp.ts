@@ -96,8 +96,8 @@ export class TemporaryContainers {
       // Fix mismatch of Browser name and container prefix
       if(browserInfo.name.toLowerCase() == "waterfox" || browserInfo.name.toLowerCase() == "librewolf") {
         // container prefix values fetched from here: https://github.com/mozilla-firefox/firefox/blob/e4d8867f696477f5ec96db70d584716c6edb1213/toolkit/components/extensions/parent/ext-toolkit.js#L30
-        console.warn("WaterFox and Librewolf detected, fixing container prefix to 'firefox-default'");
-        this.storage.local.containerPrefix = "firefox-default";
+        console.warn("WaterFox and Librewolf detected, fixing container prefix to 'firefox'");
+        this.storage.local.containerPrefix = "firefox";
       } else {
         this.storage.local.containerPrefix = browserInfo.name.toLowerCase();
       }
